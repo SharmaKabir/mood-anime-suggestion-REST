@@ -1,0 +1,29 @@
+Understanding REST API
+- A REST API is a web service that allows different applications to communicate using standard HTTP methods (GET, POST, PUT, DELETE). 
+- It manages resources identified by unique URLs and typically uses JSON or XML for data exchange.
+- REST APIs are stateless, meaning each request must contain all necessary information.
+
+GET
+ - Purpose: Retreive data from server
+ - Usage: When you want to fetch a resource or a list of resources (e.g., get a list of users or a specific user by ID).
+ - Example: GET /users retrieves all users, while GET /users/1 retrieves the user with ID 1.
+
+POST
+ - Purpose: Create a new resource on the server.
+ - Usage: When you want to submit data to the server to create a new entry (e.g., adding a new user).
+ - Example: POST /users with a request body containing user details creates a new user.
+
+PUT
+ - Purpose: Update an existing resource entirely on the server.
+ - Usage: When you want to send a complete representation of the resource to update it (e.g., changing all details of a user).
+ - Example: PUT /users/1 with the updated user data replaces the user with ID 1 with the new data.
+
+PATCH
+ - Purpose: Partially update an existing resource on the server.
+ - Usage: When you want to send only the changes to the resource instead of the entire representation (e.g., updating just the email of a user).
+ - Example: PATCH /users/1 with a request body containing just the new email updates the email of the user with ID 1.
+
+DELETE
+ - Purpose: Remove a resource from the server.
+ - Usage: When you want to delete a specific resource (e.g., removing a user).
+ - Example: DELETE /users/1 deletes the user with ID 1 from the system.
