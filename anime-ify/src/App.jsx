@@ -1,14 +1,16 @@
 
 import './App.css'
-import Navbar from './components/Navbar'
-
+import MoodFilter from './components/MoodFilter'
+import Navbar from './components/NavBar'
+import ContentList from './components/ContentList'
 function App() {
  
 
   return (
     <>
-    <Navbar/>
     <NavBar/>
+    <ContentList/>
+    <MoodFilter/>
     </>
   )
 }
