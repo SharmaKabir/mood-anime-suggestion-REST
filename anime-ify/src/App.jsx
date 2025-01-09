@@ -1,8 +1,10 @@
 
 import './App.css'
+import NavBar from './components/NavBar'
 import MoodFilter from './components/MoodFilter'
-import Navbar from './components/NavBar'
+import Footer from './components/Footer';
 import ContentList from './components/ContentList'
+
 function App() {
  
 
@@ -11,6 +13,7 @@ function App() {
     <NavBar/>
     <ContentList/>
     <MoodFilter/>
+    <Footer></Footer>
     </>
   )
 }
