@@ -43,7 +43,18 @@ const ContentContainer = () => {
 
     }, [page, selectedGenres]);
     
-
+    const toggleGenre = (moodName, genreName ) => {
+        setSelectedGenres((prev) => {
+            if (genreName === 'Highrated Anime this year') {
+                return prev.includes(genreName) ? prev.filter((item) => item !== genreName) : [...prev, genreName]
+            }
+            const genreId = genres.find((genre) => genre.name === genreName)?.mal_id;
+            return genreId ? (prev.includes(genreId) ? prev.filter((id) => id !== genreId) : [...prev, genreId]) : prev;
+        });
+        setPage(1)
+        setShowAnimeContent(true);
+        setSelectedMood(moodName);
+    }
 
 
   return (
