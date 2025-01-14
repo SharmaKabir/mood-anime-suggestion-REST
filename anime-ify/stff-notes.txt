@@ -27,3 +27,7 @@ DELETE
  - Purpose: Remove a resource from the server.
  - Usage: When you want to delete a specific resource (e.g., removing a user).
  - Example: DELETE /users/1 deletes the user with ID 1 from the system.
+
+
+used axios for fetching API
+Jinkan Anime API used 
