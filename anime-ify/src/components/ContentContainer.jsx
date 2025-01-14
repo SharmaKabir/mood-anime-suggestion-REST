@@ -67,6 +67,27 @@ const ContentContainer = () => {
     setSelectedMood(moodName);
   };
 
+  const handleHideClick = (animeId) => {
+    setHiddenAnime((prev) => {
+        const updatedSet = new Set(prev);
+        updatedSet.has(animeId) ? updatedSet.delete(animeId) : updatedSet.add(animeId)
+        return updatedSet;
+    })
+    console.log("hidden anime", animeId)
+    
+
+    if (animeList.length -1 === [...hiddenAnime].indexOf(animeId)) { handleNextPage()}
+    }
+
+    const handleBackButtonClick = () => {
+        setShowAnimeContent(false);
+        setSelectedGenres([]);
+        setSelectedMood('');
+    }
+
+    const handleNextPage = () => setPage((p) => p + 1)
+    const handlePrevPage = () => setPage((p) => Math.max(p - 1, 1));
+    
   return (
     <>
     <NavBar  onBackClick={handleBackButtonClick} selectedMood={selectedMood}/>
